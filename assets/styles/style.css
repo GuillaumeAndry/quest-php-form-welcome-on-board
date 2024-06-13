@@ -5,3 +5,66 @@
 @import "_section.css";
 @import "_article.css";
 @import "_footer.css";
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.star-color {
+    display: inline;
+    color: red;
+}
+
+.width {
+    width: 450px;
+    height: 40px;
+    background-color: #d9d9d9;
+    border: none;
+    border-radius: 10px;
+}
+
+.width2 {
+    height: 200px;
+}
+
+.button {
+    border: none;
+    margin: 20px 20px 20px -330px ;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #a306b6;
+    color: white;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.center-body {
+    justify-content: center;
+    margin-top: 30vh;
+    font-size: 24px;
+}
+
+.hone {
+    color: #a306b6;
+}
+
+.working {
+    margin-left: -170px;
+}
+
+.list-form {
+    margin: -10px 0 0 -60px;
+}
+
+.list-margin {
+    margin-left: -100px;
+}
+
+#contact2 {
+    margin-left: -170px;
+}

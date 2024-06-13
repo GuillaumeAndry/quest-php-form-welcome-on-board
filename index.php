@@ -1,3 +1,13 @@
+<?php 
+$subjects = [
+    'rdv' => 'Prendre rendez-vous',
+    'subscribe' => 'Inscription à la newsletter',
+    'claim' => 'Réclamation',
+    'contract' => 'Demander un devis'
+];
+// require_once('subject.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +65,46 @@
                 quaerat nemo nam, consequuntur nisi alias in praesentium. Fuga amet esse nam doloremque ut nemo nostrum.
             </p>
         </section>
-        <?php //@todo Add a contact form  ?>
+        <div class="center">
+            <h2 id="contact">Get in Touch</h2>
+            <p>Leave us a message and we will get back to you as soon as possible.<br><br>Fields marked with red wildcards * are required.</p>
+
+            <form id="myForm" action="treatment.php" method="post">
+                <label for="name">
+                    <h3>Name <p class="star-color">*</p>
+                    </h3>
+                    <input type="text" id="name" name="name" class="width" required="true">
+                </label>
+
+                <label for="email">
+                    <h3>Email <p class="star-color">*</p>
+                    </h3>
+                    <input type="email" id="email" name="email" class="width" required="true">
+                </label>
+
+                <label for="subject">
+                    <h3>Subject <p class="star-color">*</p>
+                    </h3>
+                    <select name="subject" id="subject" class="width" required="true">
+                        <?php foreach ($subjects as $value => $subject): ?>
+                        <option value="<?= $value ?>"><?= $subject ?></option>
+                        <?php endforeach ?>
+                        <!-- <option value="rdv">Prendre rendez-vous</option>
+                        <option value="subscribe">Inscription à la newsletter</option>
+                        <option value="claim">Réclamation</option>
+                        <option value="contract">Demander un devis</option> -->
+                    </select>
+                </label>
+
+                <label for="message">
+                    <h3>Message</h3>
+                    <textarea id="message" name="message" class="width width2"></textarea>
+                </label>
+            </form>
+            <input form="myForm" type="submit" name="" id="" value="Send" class="button">
+        </div>
+
+
     </main>
     <?php include '_footer.php' ?>
 </body>
